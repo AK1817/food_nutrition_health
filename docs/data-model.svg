@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900" role="img" aria-label="Graph data model of the food and nutrition graph: Food (Branded, SRLegacy, Foundation, Survey) linked to Nutrient, Portion, Ingredient, Component and WweiaCategory; Product and BrandedFood linked to Brand; Product linked to Country and ProductCategory; Fruit linked to ProducePrice.">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4B5A56"/>
+    </marker>
+    <style>
+      text { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .title { font-size: 30px; font-weight: 700; fill: #12302B; }
+      .sub { font-size: 17px; fill: #4B5A56; }
+      .n { font-size: 24px; font-weight: 700; fill: #FFFFFF; }
+      .c { font-size: 16px; fill: #FFFFFF; }
+      .rel { font-size: 15px; font-weight: 600; fill: #12302B; }
+      .edge { stroke: #4B5A56; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .lg { font-size: 17px; fill: #12302B; }
+    </style>
+  </defs>
+  <rect width="1400" height="900" fill="#FBFAF6"/>
+  <text x="40" y="52" class="title">Graph data model</text>
+  <text x="40" y="82" class="sub">143,149 nodes · 374,479 relationships · 17 labels · 9 relationship types</text>
+
+  <!-- edges (drawn first, under the nodes) -->
+  <path class="edge" d="M640 265 L640 160"/>
+  <path class="edge" d="M810 290 L1020 150"/>
+  <path class="edge" d="M810 330 L1020 330"/>
+  <path class="edge" d="M810 375 L1020 520"/>
+  <path class="edge" d="M780 395 L1020 700"/>
+  <path class="edge" d="M640 395 L640 520"/>
+  <path class="edge" d="M310 560 L520 560"/>
+  <path class="edge" d="M190 520 L190 380"/>
+  <path class="edge" d="M190 600 L190 720"/>
+  <path class="edge" d="M650 770 L770 770"/>
+
+  <!-- relationship labels -->
+  <g>
+    <rect x="535" y="195" width="210" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="640" y="214" text-anchor="middle" class="rel">IN_WWEIA_CATEGORY</text>
+    <rect x="845" y="206" width="120" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="905" y="225" text-anchor="middle" class="rel">HAS_NUTRIENT</text>
+    <rect x="845" y="317" width="120" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="905" y="336" text-anchor="middle" class="rel">HAS_PORTION</text>
+    <rect x="835" y="436" width="140" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="905" y="455" text-anchor="middle" class="rel">HAS_INGREDIENT</text>
+    <rect x="830" y="530" width="140" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="900" y="549" text-anchor="middle" class="rel">HAS_COMPONENT</text>
+    <rect x="595" y="445" width="90" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="640" y="464" text-anchor="middle" class="rel">MADE_BY</text>
+    <rect x="370" y="547" width="90" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="415" y="566" text-anchor="middle" class="rel">MADE_BY</text>
+    <rect x="130" y="437" width="120" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="190" y="456" text-anchor="middle" class="rel">IN_CATEGORY</text>
+    <rect x="140" y="647" width="100" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="190" y="666" text-anchor="middle" class="rel">SOLD_IN</text>
+    <rect x="662" y="724" width="96" height="26" rx="13" fill="#FBFAF6"/>
+    <text x="710" y="743" text-anchor="middle" class="rel">HAS_PRICE</text>
+  </g>
+
+  <!-- USDA nodes (blue) -->
+  <rect x="470" y="265" width="340" height="130" rx="22" fill="#2E6F95"/>
+  <text x="640" y="305" text-anchor="middle" class="n">Food · 45,053</text>
+  <text x="640" y="336" text-anchor="middle" class="c">BrandedFood 30,000 · SRLegacyFood 7,793</text>
+  <text x="640" y="362" text-anchor="middle" class="c">SurveyFood 7,083 · FoundationFood 177</text>
+  <rect x="520" y="90" width="240" height="70" rx="18" fill="#2E6F95"/>
+  <text x="640" y="122" text-anchor="middle" class="n">WweiaCategory</text>
+  <text x="640" y="146" text-anchor="middle" class="c">167 · survey foods only</text>
+  <rect x="1020" y="110" width="220" height="80" rx="18" fill="#2E6F95"/>
+  <text x="1130" y="146" text-anchor="middle" class="n">Nutrient</text>
+  <text x="1130" y="172" text-anchor="middle" class="c">237</text>
+  <rect x="1020" y="290" width="220" height="80" rx="18" fill="#2E6F95"/>
+  <text x="1130" y="326" text-anchor="middle" class="n">Portion</text>
+  <text x="1130" y="352" text-anchor="middle" class="c">46,402</text>
+  <rect x="1020" y="480" width="220" height="80" rx="18" fill="#2E6F95"/>
+  <text x="1130" y="516" text-anchor="middle" class="n">Ingredient</text>
+  <text x="1130" y="542" text-anchor="middle" class="c">2,749</text>
+  <rect x="1020" y="660" width="220" height="80" rx="18" fill="#2E6F95"/>
+  <text x="1130" y="696" text-anchor="middle" class="n">Component</text>
+  <text x="1130" y="722" text-anchor="middle" class="c">12</text>
+
+  <!-- shared Brand (purple) -->
+  <rect x="520" y="520" width="240" height="80" rx="18" fill="#7B4B94"/>
+  <text x="640" y="556" text-anchor="middle" class="n">Brand</text>
+  <text x="640" y="582" text-anchor="middle" class="c">17,922 · shared by both sources</text>
+
+  <!-- Open Food Facts nodes (orange) -->
+  <rect x="70" y="520" width="240" height="80" rx="18" fill="#C2551F"/>
+  <text x="190" y="556" text-anchor="middle" class="n">Product</text>
+  <text x="190" y="582" text-anchor="middle" class="c">30,000</text>
+  <rect x="70" y="300" width="240" height="80" rx="18" fill="#C2551F"/>
+  <text x="190" y="336" text-anchor="middle" class="n">ProductCategory</text>
+  <text x="190" y="362" text-anchor="middle" class="c">364</text>
+  <rect x="90" y="720" width="200" height="70" rx="18" fill="#C2551F"/>
+  <text x="190" y="753" text-anchor="middle" class="n">Country</text>
+  <text x="190" y="776" text-anchor="middle" class="c">100</text>
+
+  <!-- prices (green) -->
+  <rect x="470" y="735" width="180" height="70" rx="18" fill="#1F6B53"/>
+  <text x="560" y="768" text-anchor="middle" class="n">Fruit</text>
+  <text x="560" y="791" text-anchor="middle" class="c">53</text>
+  <rect x="770" y="735" width="220" height="70" rx="18" fill="#1F6B53"/>
+  <text x="880" y="768" text-anchor="middle" class="n">ProducePrice</text>
+  <text x="880" y="791" text-anchor="middle" class="c">62</text>
+
+  <!-- legend -->
+  <g>
+    <rect x="40" y="848" width="22" height="22" rx="5" fill="#2E6F95"/><text x="72" y="866" class="lg">USDA FoodData Central</text>
+    <rect x="300" y="848" width="22" height="22" rx="5" fill="#C2551F"/><text x="332" y="866" class="lg">Open Food Facts</text>
+    <rect x="520" y="848" width="22" height="22" rx="5" fill="#7B4B94"/><text x="552" y="866" class="lg">Shared</text>
+    <rect x="660" y="848" width="22" height="22" rx="5" fill="#1F6B53"/><text x="692" y="866" class="lg">Fruit prices</text>
+    <text x="1360" y="866" text-anchor="end" class="sub">Only BrandedFood nodes link to Brand; other Food types do not.</text>
+  </g>
+</svg>

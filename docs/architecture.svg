@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 700" width="1600" height="700" role="img" aria-label="Architecture: three Kaggle data sources are ingested with Python into a Neo4j AuraDB graph, which is queried with Cypher, the Neo4j MCP server, and, planned, an Aura Agent and agent memory.">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4B5A56"/>
+    </marker>
+    <style>
+      text { font-family: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+      .title { font-size: 30px; font-weight: 700; fill: #12302B; }
+      .col { font-size: 18px; font-weight: 700; letter-spacing: 2px; fill: #C2551F; }
+      .h { font-size: 22px; font-weight: 700; fill: #FFFFFF; }
+      .t { font-size: 16px; fill: #FFFFFF; }
+      .hd { font-size: 22px; font-weight: 700; fill: #12302B; }
+      .td { font-size: 16px; fill: #4B5A56; }
+      .tag { font-size: 14px; font-weight: 700; fill: #12302B; }
+      .edge { stroke: #4B5A56; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1600" height="700" fill="#FBFAF6"/>
+  <text x="40" y="52" class="title">Architecture</text>
+
+  <text x="40" y="104" class="col">DATA SOURCES (KAGGLE)</text>
+  <text x="430" y="104" class="col">INGEST</text>
+  <text x="800" y="104" class="col">GRAPH</text>
+  <text x="1210" y="104" class="col">HOW IT IS USED</text>
+
+  <!-- sources -->
+  <rect x="40" y="130" width="300" height="110" rx="18" fill="#C2551F"/>
+  <text x="60" y="170" class="h">Open Food Facts</text>
+  <text x="60" y="198" class="t">Packaged products, nutrients</text>
+  <text x="60" y="220" class="t">per 100 g, nutrition grade</text>
+  <rect x="40" y="270" width="300" height="110" rx="18" fill="#2E6F95"/>
+  <text x="60" y="310" class="h">USDA FoodData Central</text>
+  <text x="60" y="338" class="t">Foods, nutrients, portions,</text>
+  <text x="60" y="360" class="t">ingredients, survey categories</text>
+  <rect x="40" y="410" width="300" height="110" rx="18" fill="#1F6B53"/>
+  <text x="60" y="450" class="h">Fruit &amp; vegetable prices</text>
+  <text x="60" y="478" class="t">2020 USDA retail prices</text>
+  <text x="60" y="500" class="t">by form, yield, price per cup</text>
+
+  <!-- ingest -->
+  <rect x="430" y="210" width="290" height="220" rx="18" fill="#12302B"/>
+  <text x="450" y="252" class="h">Python loaders</text>
+  <text x="450" y="286" class="t">1. kagglehub downloads CSVs</text>
+  <text x="450" y="314" class="t">2. Parse and clean tables</text>
+  <text x="450" y="342" class="t">3. Cypher MERGE into Neo4j</text>
+  <text x="450" y="370" class="t">    (neo4j Python driver)</text>
+  <text x="450" y="406" class="t">Credentials from .env</text>
+
+  <!-- graph -->
+  <rect x="800" y="150" width="320" height="400" rx="26" fill="#2E8B6E"/>
+  <text x="960" y="205" text-anchor="middle" class="h">Neo4j AuraDB</text>
+  <text x="960" y="280" text-anchor="middle" style="font-size:52px;font-weight:700;fill:#FFFFFF">143,149</text>
+  <text x="960" y="312" text-anchor="middle" class="t">nodes</text>
+  <text x="960" y="380" text-anchor="middle" style="font-size:52px;font-weight:700;fill:#FFFFFF">374,479</text>
+  <text x="960" y="412" text-anchor="middle" class="t">relationships</text>
+  <text x="960" y="470" text-anchor="middle" class="t">17 labels · 9 relationship types</text>
+  <text x="960" y="498" text-anchor="middle" class="t">Foods link to nutrients, categories,</text>
+  <text x="960" y="520" text-anchor="middle" class="t">portions, ingredients and brands</text>
+
+  <!-- access layer -->
+  <line x1="1165" y1="165" x2="1165" y2="545" stroke="#4B5A56" stroke-width="3"/>
+  <rect x="1210" y="120" width="350" height="100" rx="18" fill="#FFFFFF" stroke="#DAD5C8" stroke-width="2"/>
+  <text x="1230" y="155" class="hd">Cypher queries</text>
+  <text x="1230" y="182" class="td">Healthier-swap query by category</text>
+  <rect x="1458" y="132" width="90" height="26" rx="13" fill="#B9D3CC"/><text x="1503" y="151" text-anchor="middle" class="tag">built</text>
+  <rect x="1210" y="240" width="350" height="100" rx="18" fill="#FFFFFF" stroke="#DAD5C8" stroke-width="2"/>
+  <text x="1230" y="275" class="hd">Neo4j MCP server</text>
+  <text x="1230" y="302" class="td">Lets coding agents query the graph</text>
+  <rect x="1428" y="252" width="120" height="26" rx="13" fill="#F2D9A0"/><text x="1488" y="271" text-anchor="middle" class="tag">needs sign-in</text>
+  <rect x="1210" y="360" width="350" height="100" rx="18" fill="#FBFAF6" stroke="#4B5A56" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="1230" y="395" class="hd">Aura Agent</text>
+  <text x="1230" y="422" class="td">Plain-language questions</text>
+  <rect x="1458" y="372" width="90" height="26" rx="13" fill="#E7E2D6"/><text x="1503" y="391" text-anchor="middle" class="tag">planned</text>
+  <rect x="1210" y="480" width="350" height="100" rx="18" fill="#FBFAF6" stroke="#4B5A56" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="1230" y="515" class="hd">Agent memory</text>
+  <text x="1230" y="542" class="td">Remembers condition and allergies</text>
+  <rect x="1458" y="492" width="90" height="26" rx="13" fill="#E7E2D6"/><text x="1503" y="511" text-anchor="middle" class="tag">planned</text>
+
+  <!-- arrows -->
+  <path class="edge" d="M340 185 L430 260"/>
+  <path class="edge" d="M340 325 L430 325"/>
+  <path class="edge" d="M340 465 L430 380"/>
+  <path class="edge" d="M720 320 L800 320"/>
+  <path class="edge" d="M1120 350 L1165 350"/>
+  <path class="edge" d="M1165 170 L1210 170"/>
+  <path class="edge" d="M1165 290 L1210 290"/>
+  <path class="edge" d="M1165 410 L1210 410"/>
+  <path class="edge" d="M1165 530 L1210 530"/>
+
+  <text x="40" y="650" style="font-size:17px;fill:#4B5A56">Solid boxes are built; dashed boxes are planned next steps. Counts are from the live AuraDB instance.</text>
+</svg>
